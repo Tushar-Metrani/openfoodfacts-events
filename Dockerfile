@@ -8,7 +8,7 @@ WORKDIR /opt/events/
 # under `virtualenvs.create false` and breaks the build.
 # bump this pin (or remove it) once dependencies in pyproject.toml
 # are modernized at that point a newer Poetry should work fine.
-RUN pip install poetry==1.7.1
+RUN pip install --only-binary :all: poetry==1.7.1
 RUN poetry config virtualenvs.create false
 
 COPY pyproject.toml poetry.lock /opt/events/
