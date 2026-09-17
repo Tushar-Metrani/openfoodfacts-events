@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install poetry
-        run: pipx install poetry==1.7.1
+        run: pipx install poetry
 
       - uses: actions/setup-python@v7.0.0
         with:
